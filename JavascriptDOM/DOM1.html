@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <title>DOM 1</title>
+  </head>
+  <body>
+    <div>
+      ID ---
+      <p id="text">Javascript DOM</p>
+    </div>
+
+    <div>
+      <p id="text">Javascript DOM</p>
+    </div>
+    <div>
+      <p id="third">Javascript DOM</p>
+    </div>
+
+    <div>
+      <p class="text">Javascript DOM</p>
+    </div>
+    <div>
+      <p class="text">Javascript DOM</p>
+    </div>
+    <div>
+      <p class="text">Javascript DOM</p>
+    </div>
+
+    <script>
+      const heading = document.getElementById("text");
+      heading.style.backgroundColor = "grey";
+      setTimeout(() => {
+        heading.innerHTML = "<h1>changes Old javascript</h1>";
+        heading.style.backgroundColor = "red";
+      }, 3000);
+
+      For ID
+
+      let paragraphs = document.getElementsByTagName("p");
+      console.log(paragraphs);
+
+      For Class
+
+      Method - 1
+
+      let paragraphs = document.getElementsByClassName("text");
+      Array.from(paragraphs).forEach((e) => {
+        e.style.backgroundColor = "red";
+        e.style.borderRadius = "30px";
+        e.style.border = "30px solid black";
+      });
+
+      Method - 2
+
+      let paragraphs = document.getElementsByClassName("text");
+      for (let index = 0; index < paragraphs.length; index++) {
+        paragraphs[index].style.backgroundColor = "red";
+        paragraphs[index].style.borderRadius = "30px";
+        paragraphs[index].style.border = "30px solid black";
+
+      let para = document.querySelector("#third");
+      para.style.backgroundColor = "green";
+
+      let paragra = document.querySelector("#text");
+      paragra.style.backgroundColor = "green";
+
+      let paragraphs = document.querySelectorAll(".text");
+      Array.from(paragraphs).forEach((ele) => {
+        ele.style.backgroundColor = "red";
+      });
+
+      // }
+    </script>
+  </body>
+</html>
