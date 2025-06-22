@@ -8,6 +8,16 @@
   , initial-scale=1.0"
     />
     <title>DOM 1</title>
+    <style>
+      .card {
+        width: 300px;
+        background-color: burlywood;
+        border: 2px solid black;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <div>
@@ -17,6 +27,12 @@
 
     <div>
       <p id="text">Javascript DOM</p>
+    </div>
+
+    <div class="testAtribute">
+      <p>Test Paragraph</p>
+      <p>Test Paragraph</p>
+      <p>Test Paragraph</p>
     </div>
     <div>
       <p id="third">Javascript DOM</p>
@@ -56,7 +72,7 @@
         e.style.border = "30px solid black";
       });
 
-      Method - 2
+      Method - 2;
 
       let paragraphs = document.getElementsByClassName("text");
       for (let index = 0; index < paragraphs.length; index++) {
@@ -64,18 +80,41 @@
         paragraphs[index].style.borderRadius = "30px";
         paragraphs[index].style.border = "30px solid black";
 
-      let para = document.querySelector("#third");
-      para.style.backgroundColor = "green";
+        let para = document.querySelector("#third");
+        para.style.backgroundColor = "green";
 
-      let paragra = document.querySelector("#text");
-      paragra.style.backgroundColor = "green";
+        let paragra = document.querySelector("#text");
+        paragra.style.backgroundColor = "green";
 
-      let paragraphs = document.querySelectorAll(".text");
-      Array.from(paragraphs).forEach((ele) => {
-        ele.style.backgroundColor = "red";
-      });
+        let paragraphs = document.querySelectorAll(".text");
+        Array.from(paragraphs).forEach((ele) => {
+          ele.style.backgroundColor = "red";
+        });
+      }
 
-      // }
+      let division = document.getElementById("text");
+      division.setAttribute(
+        "style",
+        "width : 50px ; background-color : red ; color : white;"
+      );
+
+      if you want to replace a class of a div you can do it like this too and with the both methods
+
+      let styling = document.getElementsByClassName("testAtribute");
+      for (let i = 0; i < styling.length; i++) {
+        styling[i].setAttribute("class", "card");
+      }
+
+      setTimeout(() => {
+        let element = document.querySelector(".testAtribute");
+        element.setAttribute("class", "card");
+      }, 3000);
+
+      If you don't want to completely remove the class you can use the ( classList .add )Method
+
+      let element = document.querySelector(".testAtribute");
+      element.classList.add("card");
+      element.classList.remove("testAtribute");
     </script>
   </body>
 </html>
