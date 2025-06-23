@@ -56,16 +56,16 @@
         heading.style.backgroundColor = "red";
       }, 3000);
 
-      For ID
+      // For ID
 
-      let paragraphs = document.getElementsByTagName("p");
+      // let paragraphs = document.getElementsByTagName("p");
       console.log(paragraphs);
 
-      For Class
+      //For Class
 
-      Method - 1
+      Method - 1;
 
-      let paragraphs = document.getElementsByClassName("text");
+      // let paragraphs = document.getElementsByClassName("text");
       Array.from(paragraphs).forEach((e) => {
         e.style.backgroundColor = "red";
         e.style.borderRadius = "30px";
@@ -98,7 +98,7 @@
         "width : 50px ; background-color : red ; color : white;"
       );
 
-      if you want to replace a class of a div you can do it like this too and with the both methods
+      // if you want to replace a class of a div you can do it like this too and with the both methods
 
       let styling = document.getElementsByClassName("testAtribute");
       for (let i = 0; i < styling.length; i++) {
@@ -110,7 +110,7 @@
         element.setAttribute("class", "card");
       }, 3000);
 
-      If you don't want to completely remove the class you can use the ( classList .add )Method
+      // If you don't want to completely remove the class you can use the ( classList .add )Method
 
       let element = document.querySelector(".testAtribute");
       element.classList.add("card");
